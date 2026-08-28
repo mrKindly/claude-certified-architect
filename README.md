@@ -948,3 +948,9 @@
 > **Explanation:** Prompt caching is designed for this use case: a fixed system prompt repeated across many requests. Cached tokens are billed at significantly reduced rates compared to uncached input tokens when cache reads apply. Message Batches support prompt caching, but because batch requests are processed asynchronously and concurrently, cache hits are best-effort — include identical `cache_control` blocks and follow Anthropic's batch + caching guidance to maximize hit rates. With a 1,800-token system prompt across 8,000 daily requests, successful cache reuse can greatly reduce full-price input-token spend versus no caching. Option A (multi-document batching per call) reduces request count but complicates response parsing and doesn't reduce token cost per document. Option C (shorter prompt) risks degrading extraction quality — the normalization rules and schema documentation are doing real work. Option D addresses per-batch API overhead, which is not the dominant cost in this scenario; token cost is.
 
 ---
+
+## Exam access and registration
+
+Registration runs through the Anthropic Partner Academy and requires affiliation with a Claude Partner Network organization; there is no individual sign-up. Exams are delivered by [Pearson VUE](https://www.pearsonvue.com/us/en/anthropic.html) (online proctored or at a test center), the fee is $125 per attempt as of the mid-2026 exam guide, and credentials are valid for 12 months with a free on-time renewal.
+
+No partner organization? The routes in are an employer that joins the [Claude Partner Network](https://claude.com/partners), a qualifying company of your own, or membership in an existing partner firm ([how the partner-firm route works](https://youraidept.com/network/claude-certification) — disclosure: that guide is maintained by YAID, a partner firm).
